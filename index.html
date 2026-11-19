@@ -1,0 +1,254 @@
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta name="description" content="ANIPACKS is a free anime editing resource hub with creator-approved Twixtor packs, editing inspiration, music recommendations, sound effects, and tutorials.">
+
+<meta name="theme-color" content="#090910">
+
+<title>ANIPACKS — Free Anime Editing Resources</title>
+
+<style>
+
+:root{--bg:#090910;--panel:#12121d;--panel2:#191927;--text:#f5f4fb;--muted:#aaa8bd;--purple:#9b72ff;--cyan:#62e5df;--line:#29283a}
+
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}
+
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+
+header{position:sticky;top:0;z-index:10;background:#090910ef;border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
+
+nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{font-weight:950;letter-spacing:.13em;font-size:1.25rem}.logo span{color:var(--purple)}.links{display:flex;gap:22px;color:var(--muted);font-size:.9rem}.links a:hover{color:white}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:10px;background:var(--purple);color:#100d1a;font-weight:800;border:1px solid transparent}.btn.ghost{background:transparent;border-color:#55506c;color:white}.btn:hover{filter:brightness(1.12)}
+
+.hero{padding:92px 0 72px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 78% 25%,#44277a66,transparent 42%),radial-gradient(ellipse at 12% 80%,#176a7060,transparent 40%)}
+
+.eyebrow{color:var(--cyan);font-size:.76rem;font-weight:900;letter-spacing:.2em;text-transform:uppercase}.hero h1{font-size:clamp(3rem,8vw,6.7rem);line-height:.94;letter-spacing:-.065em;max-width:850px;margin:18px 0}.hero h1 em{font-style:normal;color:var(--purple)}.hero p{max-width:650px;color:var(--muted);font-size:1.1rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+
+.stats{display:flex;gap:34px;flex-wrap:wrap;margin-top:48px;color:var(--muted);font-size:.9rem}.stats b{display:block;color:white;font-size:1.25rem}
+
+section{padding:72px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:26px}.section-head h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.045em;margin:8px 0 0}.section-head p{color:var(--muted);max-width:480px;margin:0}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}.art{height:135px;display:grid;place-items:center;font-size:1.6rem;font-weight:950;letter-spacing:.05em;background:linear-gradient(135deg,#342057,#121d37 55%,#15585a);text-align:center;padding:12px}.art.alt{background:linear-gradient(135deg,#41213b,#28214c 55%,#1b5556)}.art.alt2{background:linear-gradient(135deg,#172d50,#36205c 55%,#6a3d67)}.card-body{padding:19px}.tag{font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--cyan);font-weight:900}.card h3{margin:7px 0;font-size:1.15rem}.card p{color:var(--muted);font-size:.92rem;margin:0 0 14px}.small-link{color:var(--purple);font-weight:800;font-size:.9rem}
+
+.searchbar{display:flex;gap:10px;margin:0 0 20px}.searchbar input{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:10px;color:white;padding:13px 15px;font:inherit}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}.filter{background:#171725;border:1px solid var(--line);color:#d8d5e7;border-radius:99px;padding:8px 13px;cursor:pointer}.filter.active{background:#30234c;border-color:var(--purple);color:white}
+
+.status{display:inline-block;border:1px solid #554b70;color:#cfc3ff;border-radius:99px;padding:4px 8px;font-size:.72rem;font-weight:800;margin-bottom:10px}.muted{color:var(--muted)}.empty{display:none;color:var(--muted);padding:20px;border:1px dashed var(--line);border-radius:12px}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{padding:26px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#171427,#101a22)}.panel h3{font-size:1.45rem;margin:8px 0}.panel p,.panel li{color:var(--muted)}.panel ul{padding-left:20px}.resource-list{display:grid;gap:12px}.resource{padding:16px;border-radius:13px;background:var(--panel);border:1px solid var(--line)}.resource b{display:block;margin-bottom:4px}.resource p{margin:0 0 8px;color:var(--muted);font-size:.9rem}
+
+.callout{padding:16px 18px;border:1px solid #65552f;background:#241f14;color:#e9dcb8;border-radius:12px;font-size:.88rem;margin-top:22px}
+
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.85rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+@media(max-width:760px){.links{display:none}.grid,.split{grid-template-columns:1fr}.hero{padding:72px 0 55px}.section-head{display:block}.section-head p{margin-top:12px}.stats{gap:20px}}
+
+</style>
+
+</head>
+
+<body>
+
+<header><div class="wrap"><nav>
+
+<a class="logo" href="#">ANI<span>PACKS</span></a>
+
+<div class="links"><a href="#anime">Anime packs</a><a href="#audio">Music & SFX</a><a href="#learn">Learn</a><a href="#about">About</a></div>
+
+<a class="btn ghost" href="#anime">Explore library</a>
+
+</nav></div></header>
+
+<main>
+
+<section class="hero"><div class="wrap">
+
+<div class="eyebrow">The anime editor's hub</div>
+
+<h1>EDIT.<br><em>CREATE.</em><br>LEVEL UP.</h1>
+
+<p>A free home for anime editing resources, creator-approved Twixtor packs, music inspiration, sound effects, and beginner-friendly editing tips. No paywalls.</p>
+
+<div class="actions"><a class="btn" href="#anime">Explore anime library ↗</a><a class="btn ghost" href="#audio">Find music & SFX</a></div>
+
+<div class="stats"><div><b>100% FREE</b>Core resources</div><div><b>MORE SERIES</b>One growing library</div><div><b>CREATE</b>Without paywalls</div></div>
+
+</div></section>
+
+<section id="anime"><div class="wrap">
+
+<div class="section-head"><div><div class="eyebrow">Anime resource directory</div><h2>Find packs by series.</h2></div><p>Search the directory and browse by anime. Pack slots are ready for links to clips that creators have authorized for sharing.</p></div>
+
+<div class="searchbar"><input id="animeSearch" type="search" placeholder="Search anime or character…" aria-label="Search anime or character"></div>
+
+<div class="filters" id="filters">
+
+<button class="filter active" data-filter="all">All series</button><button class="filter" data-filter="action">Action</button><button class="filter" data-filter="adventure">Adventure</button><button class="filter" data-filter="fantasy">Fantasy</button>
+
+</div>
+
+<div class="grid" id="animeGrid">
+
+<article class="card anime-card" data-name="jujutsu kaisen gojo itadori sukuna" data-type="action fantasy"><div class="art">JUJUTSU KAISEN</div><div class="card-body"><div class="tag">Anime library</div><h3>Jujutsu Kaisen</h3><p>Character-focused pack directory for Gojo, Yuji, Sukuna, Megumi, and more.</p><span class="status">Approved packs: add as cleared</span></div></article>
+
+<article class="card anime-card" data-name="naruto sasuke kakashi itachi" data-type="action adventure"><div class="art alt">NARUTO</div><div class="card-body"><div class="tag">Anime library</div><h3>Naruto</h3><p>Browse future creator-approved packs for Naruto, Sasuke, Kakashi, Itachi, and more.</p><span class="status">Approved packs: add as cleared</span></div></article>
+
+<article class="card anime-card" data-name="bleach ichigo aizen rukia kenpachi" data-type="action fantasy"><div class="art alt2">BLEACH</div><div class="card-body"><div class="tag">Anime library</div><h3>Bleach</h3><p>Directory for Ichigo, Aizen, Rukia, Kenpachi, and other characters.</p><span class="status">Approved packs: add as cleared</span></div></article>
+
+<article class="card anime-card" data-name="dragon ball z goku vegeta gohan" data-type="action fantasy"><div class="art">DRAGON BALL</div><div class="card-body"><div class="tag">Anime library</div><h3>Dragon Ball</h3><p>Future pack categories for Goku, Vegeta, Gohan, transformations, and battles.</p><span class="status">Approved packs: add as cleared</span></div></article>
+
+<article class="card anime-card" data-name="one piece luffy zoro sanji" data-type="action adventure"><div class="art alt">ONE PIECE</div><div class="card-body"><div class="tag">Anime library</div><h3>One Piece</h3><p>Directory for Luffy, Zoro, Sanji, the Straw Hats, and more.</p><span class="status">Approved packs: add as cleared</span></div></article>
+
+<article class="card anime-card" data-name="demon slayer tanjiro nezuko rengoku" data-type="action fantasy"><div class="art alt2">DEMON SLAYER</div><div class="card-body"><div class="tag">Anime library</div><h3>Demon Slayer</h3><p>Future pack categories for Tanjiro, Nezuko, Rengoku, and the Hashira.</p><span class="status">Approved packs: add as cleared</span></div></article>
+
+<article class="card anime-card" data-name="attack on titan eren levi mikasa" data-type="action fantasy"><div class="art">ATTACK ON TITAN</div><div class="card-body"><div class="tag">Anime library</div><h3>Attack on Titan</h3><p>Directory for Eren, Levi, Mikasa, and other character edits.</p><span class="status">Approved packs: add as cleared</span></div></article>
+
+<article class="card anime-card" data-name="chainsaw man denji power makima" data-type="action fantasy"><div class="art alt">CHAINSAW MAN</div><div class="card-body"><div class="tag">Anime library</div><h3>Chainsaw Man</h3><p>Future pack categories for Denji, Power, Makima, and more.</p><span class="status">Approved packs: add as cleared</span></div></article>
+
+<article class="card anime-card" data-name="solo leveling sung jinwoo" data-type="action fantasy"><div class="art alt2">SOLO LEVELING</div><div class="card-body"><div class="tag">Anime library</div><h3>Solo Leveling</h3><p>Directory for Jinwoo, shadows, dungeons, and other character edits.</p><span class="status">Approved packs: add as cleared</span></div></article>
+
+<article class="card anime-card" data-name="tokyo revengers mikey draken takemichi" data-type="action adventure"><div class="art">TOKYO REVENGERS</div><div class="card-body"><div class="tag">Anime library</div><h3>Tokyo Revengers</h3><p>Future pack categories for Mikey, Draken, Takemichi, and the gangs.</p><span class="status">Approved packs: add as cleared</span></div></article>
+
+<article class="card anime-card" data-name="hunter x hunter gon killua kurapika" data-type="adventure fantasy"><div class="art alt">HUNTER × HUNTER</div><div class="card-body"><div class="tag">Anime library</div><h3>Hunter × Hunter</h3><p>Directory for Gon, Killua, Kurapika, and more.</p><span class="status">Approved packs: add as cleared</span></div></article>
+
+<article class="card anime-card" data-name="my hero academia deku bakugo todoroki" data-type="action fantasy"><div class="art alt2">MY HERO ACADEMIA</div><div class="card-body"><div class="tag">Anime library</div><h3>My Hero Academia</h3><p>Future pack categories for Deku, Bakugo, Todoroki, and the heroes.</p><span class="status">Approved packs: add as cleared</span></div></article>
+
+</div><p class="empty" id="noResults">No matching series found. Try another search.</p>
+
+<div class="callout"><b>Pack availability:</b> These are organized series pages, not a claim that every pack is already uploaded. Each download will be added only when its creator has authorized redistribution or the asset is otherwise properly licensed.</div>
+
+</div></section>
+
+<section id="audio"><div class="wrap">
+
+<div class="section-head"><div><div class="eyebrow">Build the atmosphere</div><h2>Music & sound effects.</h2></div><p>Find audio that fits the energy of your edit. Use the source library's own license terms for each track or effect.</p></div>
+
+<div class="split">
+
+<div class="panel"><div class="eyebrow">Music recommendations</div><h3>Match the sound to the scene.</h3>
+
+<ul>
+
+<li><b>Dark / intense edits:</b> dark electronic, cinematic bass, tense ambient builds.</li>
+
+<li><b>Fast fight edits:</b> high-energy electronic, breakbeat, or instrumental rock.</li>
+
+<li><b>Emotional edits:</b> piano, atmospheric pads, soft strings.</li>
+
+<li><b>Hype / transformation edits:</b> orchestral percussion, rising synths, energetic instrumentals.</li>
+
+<li><b>Adventure edits:</b> uplifting cinematic, rhythmic percussion, bright instrumentals.</li>
+
+</ul>
+
+<p class="muted">Try searching these moods and genres in the audio libraries below. Avoid assuming a popular song is free to reuse.</p></div>
+
+<div class="panel"><div class="eyebrow">SFX recommendations</div><h3>Layer these sound types.</h3>
+
+<ul>
+
+<li><b>Transitions:</b> whooshes, swishes, reverse sweeps.</li>
+
+<li><b>Impact moments:</b> cinematic hits, low booms, short impacts.</li>
+
+<li><b>Build-ups:</b> risers, tension drones, heartbeat-style pulses.</li>
+
+<li><b>Glitch edits:</b> digital glitches, static bursts, UI beeps.</li>
+
+<li><b>Atmosphere:</b> wind, rain, room tone, distant ambience.</li>
+
+</ul>
+
+<p class="muted">Keep effects short and balanced so they support the edit instead of overpowering it.</p></div>
+
+</div>
+
+<div class="grid" style="margin-top:18px">
+
+<article class="card"><div class="card-body"><div class="tag">Music + sound effects</div><h3>YouTube Audio Library</h3><p>Search tracks by mood, genre, and attribution; browse sound effects too. YouTube says its library downloads are copyright-safe for YouTube use. Check the terms for other uses.</p><a class="small-link" href="https://www.youtube.com/audiolibrary" target="_blank" rel="noopener">Open Audio Library ↗</a></div></article>
+
+<article class="card"><div class="card-body"><div class="tag">Music + sound effects</div><h3>Pixabay</h3><p>Explore free music and sound effects. Check the license and any restrictions on the specific item before using or sharing it.</p><a class="small-link" href="https://pixabay.com/" target="_blank" rel="noopener">Explore Pixabay ↗</a></div></article>
+
+<article class="card"><div class="card-body"><div class="tag">Music + sound effects</div><h3>Mixkit</h3><p>Browse music and sound effects. Some asset categories or items can have different license conditions, so verify each asset's terms.</p><a class="small-link" href="https://mixkit.co/" target="_blank" rel="noopener">Explore Mixkit ↗</a></div></article>
+
+<article class="card"><div class="card-body"><div class="tag">Sound effects</div><h3>Freesound</h3><p>A large sound library. Licenses vary by upload; check whether attribution is required and whether commercial use is allowed.</p><a class="small-link" href="https://freesound.org/" target="_blank" rel="noopener">Explore Freesound ↗</a></div></article>
+
+<article class="card"><div class="card-body"><div class="tag">Music inspiration</div><h3>Incompetech</h3><p>Music by Kevin MacLeod with license and credit details listed on the site. Check the track's required attribution.</p><a class="small-link" href="https://incompetech.com/music/" target="_blank" rel="noopener">Explore Incompetech ↗</a></div></article>
+
+<article class="card"><div class="card-body"><div class="tag">Original audio</div><h3>Make your own SFX</h3><p>Record original non-copyrighted sounds or create your own simple transitions and impacts to give your edits a unique identity.</p><span class="status">ANIPACKS creator tip</span></div></article>
+
+</div>
+
+<div class="callout"><b>Audio license reminder:</b> “Royalty-free” does not mean unrestricted. Read the exact license for every track or sound, follow attribution rules, and do not re-upload audio files to ANIPACKS unless redistribution is expressly allowed.</div>
+
+</div></section>
+
+<section id="learn"><div class="wrap"><div class="split">
+
+<div class="panel"><div class="eyebrow">Free learning</div><h3>Better edits start with better skills.</h3><p>Build your editing fundamentals with clear, beginner-friendly lessons.</p><ul><li>Timing, sync and pacing</li><li>Transitions and motion</li><li>Color, effects and workflow</li><li>How to develop your own editing style</li></ul></div>
+
+<div class="panel" id="about"><div class="eyebrow">Our promise</div><h3>Free for every editor.</h3><p>ANIPACKS is launching with free resources and tutorials. No paid memberships, locked downloads, or coaching fees.</p><p><b>Future plan:</b> Clearly labeled sponsorships may support the site later while keeping the core library free.</p><p><b>Creator submissions:</b> Before adding a pack, verify who made it, what rights they grant, and whether redistribution is allowed.</p></div>
+
+</div>
+
+<div class="callout"><b>Copyright note:</b> Anime episodes, scenes, character art, and many fan edits are copyrighted. A clip being publicly viewable online does not automatically give permission to download, rehost, or redistribute it. ANIPACKS should link to legitimate sources or host only assets with clear permission.</div>
+
+</div></section>
+
+</main>
+
+<footer><div class="wrap foot"><div><b class="logo">ANI<span>PACKS</span></b><div>Made for editors who keep creating.</div></div><div>© <span id="year"></span> ANIPACKS · Free editing resources</div></div></footer>
+
+<script>
+
+document.getElementById('year').textContent=new Date().getFullYear();
+
+const search=document.getElementById('animeSearch');
+
+const cards=[...document.querySelectorAll('.anime-card')];
+
+const filters=[...document.querySelectorAll('.filter')];
+
+let active='all';
+
+function updateCards(){
+
+ const q=search.value.trim().toLowerCase();let shown=0;
+
+ cards.forEach(card=>{
+
+  const matchesText=(card.dataset.name+' '+card.innerText).toLowerCase().includes(q);
+
+  const matchesType=active==='all'||card.dataset.type.split(' ').includes(active);
+
+  card.style.display=matchesText&&matchesType?'':'none';
+
+  if(matchesText&&matchesType)shown++;
+
+ });
+
+ document.getElementById('noResults').style.display=shown?'none':'block';
+
+}
+
+search.addEventListener('input',updateCards);
+
+filters.forEach(btn=>btn.addEventListener('click',()=>{
+
+ filters.forEach(b=>b.classList.remove('active'));btn.classList.add('active');active=btn.dataset.filter;updateCards();
+
+}));
+
+</script>
+
+</body>
+
+</html>
